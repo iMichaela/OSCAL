@@ -412,7 +412,7 @@ profile:
       <section id="URI-multiple">
         <head>Multiple imports</head>
         <p>Each import directive is processed to produce a set of controls. <req
-            id="rq-mulitple-imports">Note that this occurs even if the same catalog is imported
+            id="rq-multiple-imports" level="must">Note that this occurs even if the same catalog is imported
             multiple times: each distinct import collects controls into a separate
               <int>selection</int></req>: </p>
         <tagging whose="source_profile">
@@ -445,7 +445,7 @@ intermediate:
           - ac-3
           - ac-4 
         </tagging>
-        <p><req id="rq-multiple-merge">The control inclusions are combined and collapsed in the next
+        <p><req id="rq-multiple-merge" level="must">The control inclusions are combined and collapsed in the next
             phase of processing</req>, <term>merge</term>(see <xref rid="merge-phase"/>) . </p>
         <p>Multiple imports against the same resource are allowed, and would most commonly occur when the profile author is using <xref rid="mapping"/> to create very specific output. 
           Multiple imports may result in outputs with clashing control IDs if mapping or the merge directive is not set correctly.</p>
@@ -1410,7 +1410,7 @@ control:
           <p><req level="must" id="req-meta-oscal-version">The value of metadata:oscal-version in the target MUST be set with a string that identifies the version of OSCAL used by this tool to resolve the profile (ex. 1.0.0). This value MUST be determined by compiling the oscal-versions from each imported document and the source profile, and taking the most recent minor version. If this version is more recent than what the resolution tool is using, then the value of oscal-version MUST be the version that the tool used internally.</req> <req level="must" id="req-meta-oscalversion-error">If any of the above OSCAL versions (imported document versions, source profile version, tool version) are of a different major version (the first digit differs), the tool SHOULD provide an error and cease processing.</req></p>
         </li>
         <li>
-          <p><req level="must" id="req-meta-last-modified">The value of metadata:last-modified in the target MUST be set with a valid timestamp representing the time the profile resolution completed.</req></p>
+          <p><req level="must" id="req-meta-last-modified">The value of metadata:last-modified in the target MUST be set with a valid timestamp. This value SHOULD represent the time that profile resolution occurred.</req></p>
         </li>
         <li>
           <p><req level="should" id="req-meta-source-profile">A child <src>prop</src> object with <src>name:source-profile</src> MUST be created. The <src>value</src> object of this <src>prop</src> SHOULD be set with a valid URI that points to the profile that resulted in this catalog. </req> 

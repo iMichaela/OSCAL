@@ -67,7 +67,7 @@
       <statement>If a processor encounters a circular import as described above (self-imports are inherently circular), the processor MUST cease processing and generate an error. </statement>
       <test file="requirement-tests/req-circular_import.xml" status="pending">PENDING circular import detection</test>
    </requirement>
-   <requirement id="rq-mulitple-imports">
+   <requirement id="rq-multiple-imports">
       <statement>Note that this occurs even if the same catalog is imported multiple times: each distinct import collects controls into a separate selection</statement>
       <test file="requirement-tests/req-chained-deepA.xml" status="pending">PENDING chained profiles</test>
    </requirement>
@@ -325,7 +325,7 @@
       <statement>If any of the above OSCAL versions (imported document versions, source profile version, tool version) are of a different major version (the first digit differs), the tool SHOULD provide an error and cease processing.</statement>
    </requirement>
    <requirement level="must" id="req-meta-last-modified">
-      <statement>The value of metadata:last-modified in the target MUST be set with a valid timestamp representing the time the profile resolution completed.</statement>
+      <statement>The value of metadata:last-modified in the target MUST be set with a valid timestamp. This value SHOULD represent the time that profile resolution occurred.</statement>
       <test status="pending">PENDING develop an external (XPath) test</test>
    </requirement>
    <requirement level="should" id="req-meta-source-profile">
