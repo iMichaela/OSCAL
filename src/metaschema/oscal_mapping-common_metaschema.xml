@@ -85,7 +85,7 @@
                     map</code>. The <code>relationship</code> type and the <code>matching-rationale</code>
                     must be used together. However, more than one <code>matching-rationale</code>
                     method may apply to a <code>source</code> and <code>target</code> pair. </description>
-                <json-value-key>type</json-value-key>
+                <!-- json-value-key>type</json-value-key -->
                 <constraint>
                     <allowed-values target=".[has-oscal-namespace('http://csrc.nist.gov/ns/oscal')]">
                         <enum value="equivalent-to">The <code>source</code> and <code>target</code>
