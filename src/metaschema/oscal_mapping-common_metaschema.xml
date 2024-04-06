@@ -15,6 +15,7 @@
     <import href="oscal_metadata_metaschema.xml" />
 
     <!-- ASSEMBLY DEFINITIONS -->
+<!--
     <define-assembly name="mapping">
         <formal-name>Control Mapping</formal-name>
         <description>A mapping between two target resources.</description>
@@ -82,7 +83,7 @@
                     map</code>. The <code>relationship</code> type and the <code>matching-rationale</code>
                     must be used together. However, more than one <code>matching-rationale</code>
                     method may apply to a <code>source</code> and <code>target</code> pair. </description>
-                <!-- json-value-key>type</json-value-key -->
+    <json-value-key>type</json-value-key>
                 <constraint>
                     <allowed-values target=".[has-oscal-namespace('http://csrc.nist.gov/ns/oscal')]">
                         <enum value="equivalent-to">The <code>source</code> and <code>target</code>
@@ -241,9 +242,8 @@
             <field ref="remarks" in-xml="WITH_WRAPPER" min-occurs="0" max-occurs="1" />
         </model>
     </define-assembly>
-
-
-    <!-- Original
+-->
+<!-- Original
     <qualifier
         subject=“source|target|both”
         predicate=“has-requirement|has-incompatibility”
@@ -347,8 +347,8 @@
         category=“restricted|addressable|blocked”>
         Description of qualifier...
     </qualifier>
--->
-
+    -->
+<!--
     <define-assembly name="gap-summary">
         <formal-name>Gap Summary</formal-name>
         <description>A <em>by-id</em> collection of all controls that were not mapped at all in this <code>
@@ -357,7 +357,6 @@
             relationship-gal</code>. </description>
         <define-flag name="uuid" as-type="uuid" required="yes">
             <formal-name>Gap Summary Universally Unique Identifier</formal-name>
-            <!-- Identifier Declaration -->
             <description>A <a
                     href="https://pages.nist.gov/OSCAL/concepts/identifier-use/#machine-oriented">
                 machine-oriented</a>, <a
@@ -411,7 +410,7 @@
                 dependent controls (enhancements) without having to call them individually.</p>
         </remarks>
     </define-assembly>
-
+-->
     <!-- FIELD DEFINITIONS-->
     <define-field name="confidence-score" as-type="string">
         <formal-name>Confidence Score</formal-name>
