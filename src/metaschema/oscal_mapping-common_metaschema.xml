@@ -372,7 +372,7 @@
                 per-subject</a>, which means it should be consistently used to identify the same
                 subject across revisions of the document.</description>
         </define-flag>
-        <!--model>
+        <model>
             <assembly ref="select-control-by-id" min-occurs="1" max-occurs="unbounded">
                 <use-name>unmapped-controls</use-name>
                 <group-as name="unmapped-controls" in-json="ARRAY" />
@@ -384,14 +384,14 @@
                         having to call them individually.</p>
                 </remarks>
             </assembly>
-        </model -->
+        </model>
     </define-assembly>
-<!--
+
     <define-assembly name="select-control-by-id" scope="local">
         <formal-name>Select Control</formal-name>
         <description>Select a control or controls from an imported control set.</description>
         <flag ref="with-child-controls" />
-        <model>
+        <!-- model>
             <define-field name="with-id" as-type="token" max-occurs="unbounded">
                 <formal-name>Match Controls by Identifier</formal-name>
                 <description>Selecting a control by its ID given as a literal.</description>
@@ -400,7 +400,7 @@
             <assembly ref="matching" max-occurs="unbounded">
                 <group-as name="matching" in-json="ARRAY" />
             </assembly>
-        </model>
+        </model -->
         <remarks>
             <p>If <code>with-child-controls</code> is <q>yes</q> on the call to a control, no
                 sibling <code>call</code>elements need to be used to call any controls appearing
@@ -409,7 +409,7 @@
                 dependent controls (enhancements) without having to call them individually.</p>
         </remarks>
     </define-assembly>
--->
+
     <!-- FIELD DEFINITIONS-->
     <define-field name="confidence-score" as-type="string">
         <formal-name>Confidence Score</formal-name>
