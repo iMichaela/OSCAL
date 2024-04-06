@@ -15,6 +15,38 @@
     <import href="oscal_metadata_metaschema.xml" />
 
     <!-- ASSEMBLY DEFINITIONS -->
+    <define-assembly name="mapping">
+        <formal-name>Control Mapping</formal-name>
+        <description>A mapping between two target resources.</description>
+        <define-flag name="uuid" as-type="uuid" required="yes">
+            <formal-name>Mapping Universally Unique Identifier</formal-name>
+            <description>A <a
+                    href="https://pages.nist.gov/OSCAL/concepts/identifier-use/#machine-oriented">
+                machine-oriented</a>, <a
+                    href="https://pages.nist.gov/OSCAL/concepts/identifier-use/#globally-unique">globally
+                unique</a> identifier with <a
+                    href="https://pages.nist.gov/OSCAL/concepts/identifier-use/#cross-instance">
+                cross-instance</a> scope that can be used to reference this mapping definition
+                elsewhere in this or other OSCAL instances. The locally defined <em>UUID</em> of the <code>
+                mapping</code> can be used to reference the data item locally or globally (e.g., in
+                an imported OSCAL instance). This UUID should be assigned <a
+                    href="https://pages.nist.gov/OSCAL/concepts/identifier-use/#consistency">
+                per-subject</a>, which means it should be consistently used to identify the same
+                mapping across revisions of the document.</description>
+        </define-flag>
+        <model>
+            <assembly ref="mapping-resource-reference" min-occurs="1">
+                <use-name>source-resource</use-name>
+            </assembly>
+            <assembly ref="mapping-resource-reference" min-occurs="1">
+                <use-name>target-resource</use-name>
+            </assembly>
+            <assembly ref="map" min-occurs="1" max-occurs="unbounded">
+                <group-as name="maps" in-json="ARRAY" />
+            </assembly>
+        </model>
+    </define-assembly>
+
     <define-assembly name="map">
         <formal-name>Mapping Entry</formal-name>
         <description>A relationship-based mapping between a source and target set consisting of
@@ -82,13 +114,15 @@
                             could result on <code>relationships</code> mapping that allows for more
                             inference than using this relationship type.</enum>
                         <enum value="no-relationship">The <code>source</code> and <code>target</code>
-                            requirements are not related; their content does not overlap. This relation 
-                            is introduced not with the intention to support exhaustiv mapping of all  
-                            requirements and statements that have no overlap, but rather to support 
-                            edge cases such is the need to tailor a <code>relationship</code> in the context 
-                            of a component or system to better align with the implementation and configuration 
-                            of the respective component or system. Also, this <code>relationship</code> is 
-                            provided in support of the <a href="https://doi.org/10.6028/NIST.IR.8477">NIST IR 8477</a>.</enum>
+                            requirements are not related; their content does not overlap. This
+                            relation is introduced not with the intention to support exhaustiv
+                            mapping of all requirements and statements that have no overlap, but
+                            rather to support edge cases such is the need to tailor a <code>
+                            relationship</code> in the context of a component or system to better
+                            align with the implementation and configuration of the respective
+                            component or system. Also, this <code>relationship</code> is provided in
+                            support of the <a href="https://doi.org/10.6028/NIST.IR.8477">NIST IR
+                            8477</a>.</enum>
                     </allowed-values>
                 </constraint>
                 <remarks>
