@@ -33,10 +33,10 @@
                   <assembly ref="mapping-provenance" min-occurs="1">
                         <use-name>provenance</use-name>
                   </assembly>
-                  <!-- assembly ref="mapping" min-occurs="1" max-occurs="unbounded">
+                  <assembly ref="mapping" min-occurs="1" max-occurs="unbounded">
                         <group-as name="mappings" />
                   </assembly>
-                  <assembly ref="gap-summary">
+                  <!-- assembly ref="gap-summary">
                         <use-name>source-gap-summary</use-name>
                   </assembly>
                   <assembly ref="gap-summary">

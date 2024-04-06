@@ -15,7 +15,7 @@
     <import href="oscal_metadata_metaschema.xml" />
 
     <!-- ASSEMBLY DEFINITIONS -->
-<!--
+
     <define-assembly name="mapping">
         <formal-name>Control Mapping</formal-name>
         <description>A mapping between two target resources.</description>
@@ -35,7 +35,7 @@
                 per-subject</a>, which means it should be consistently used to identify the same
                 mapping across revisions of the document.</description>
         </define-flag>
-        <model>
+        <!-- model>
             <assembly ref="mapping-resource-reference" min-occurs="1">
                 <use-name>source-resource</use-name>
             </assembly>
@@ -45,9 +45,9 @@
             <assembly ref="map" min-occurs="1" max-occurs="unbounded">
                 <group-as name="maps" in-json="ARRAY" />
             </assembly>
-        </model>
+        </model -->
     </define-assembly>
-
+<!-- 
     <define-assembly name="map">
         <formal-name>Mapping Entry</formal-name>
         <description>A relationship-based mapping between a source and target set consisting of
