@@ -184,8 +184,7 @@
         </define-flag>
         <define-flag name="id-ref" as-type="string" required="yes">
             <formal-name>Subject Identifier Reference</formal-name>
-            <description>A reference to an identified subject that is of the specified <code>type</code>
-                .</description>
+            <description>A reference to an identified subject that is of the specified <code>type</code>.</description>
         </define-flag>
         <model>
             <assembly ref="property" max-occurs="unbounded">
@@ -348,7 +347,7 @@
         Description of qualifier...
     </qualifier>
     -->
-<!--
+
     <define-assembly name="gap-summary">
         <formal-name>Gap Summary</formal-name>
         <description>A <em>by-id</em> collection of all controls that were not mapped at all in this <code>
@@ -373,7 +372,7 @@
                 per-subject</a>, which means it should be consistently used to identify the same
                 subject across revisions of the document.</description>
         </define-flag>
-        <model>
+        <!--model>
             <assembly ref="select-control-by-id" min-occurs="1" max-occurs="unbounded">
                 <use-name>unmapped-controls</use-name>
                 <group-as name="unmapped-controls" in-json="ARRAY" />
@@ -385,9 +384,9 @@
                         having to call them individually.</p>
                 </remarks>
             </assembly>
-        </model>
+        </model -->
     </define-assembly>
-
+<!--
     <define-assembly name="select-control-by-id" scope="local">
         <formal-name>Select Control</formal-name>
         <description>Select a control or controls from an imported control set.</description>
