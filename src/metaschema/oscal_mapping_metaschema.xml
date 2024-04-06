@@ -18,7 +18,7 @@
             </p>
       </remarks>
       <import href="oscal_metadata_metaschema.xml"/>
-      <!--import href="oscal_mapping-common_metaschema.xml"/ -->
+      <import href="oscal_mapping-common_metaschema.xml"/>
 
       <define-assembly name="mapping-collection">
             <formal-name>Mapping Collection</formal-name>
@@ -54,7 +54,7 @@
             </remarks>
       </define-assembly>
 
-      <!-- define-assembly name="mapping">
+      <define-assembly name="mapping">
             <formal-name>Control Mapping</formal-name>
             <description>A mapping between two target resources.</description>
             <define-flag name="uuid" as-type="uuid" required="yes">
@@ -72,5 +72,5 @@
                         <group-as name="maps" in-json="ARRAY" />
                   </assembly>
             </model>
-      </define-assembly -->
+      </define-assembly>
 </METASCHEMA>
