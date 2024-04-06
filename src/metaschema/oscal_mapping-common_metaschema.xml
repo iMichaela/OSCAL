@@ -392,6 +392,8 @@
 
     <!-- TBD: Move assembly to a common file since it is also defined in oscal_profile_metaschema.xml.-->
     <!-- NOTE: there is another locallly defined assembly but it is NOT identical with this one in mapping and profile -->
+    <!-- NOTE: NOT clear the selection of controls using pattern matching is needed. If NOT needed, we can simplify but this 
+        assembly will be similar to the assessemnt-common one and cannot be moved. -->
     <define-assembly name="select-control-by-id" scope="local">
         <formal-name>Select Control</formal-name>
         <description>Select a control or controls from an imported control set.</description>
