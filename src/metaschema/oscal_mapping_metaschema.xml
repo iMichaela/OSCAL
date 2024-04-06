@@ -18,7 +18,7 @@
             </p>
       </remarks>
       <import href="oscal_metadata_metaschema.xml"/>
-      <import href="oscal_mapping-common_metaschema.xml"/>
+      <!--import href="oscal_mapping-common_metaschema.xml"/ -->
 
       <define-assembly name="mapping-collection">
             <formal-name>Mapping Collection</formal-name>
@@ -29,7 +29,7 @@
                   <description>A globally unique identifier with cross-instance scope for this catalog instance. This UUID should be changed when this document is revised.</description>
             </define-flag>
 
-            <model>
+            <!-- model>
                   <assembly ref="metadata" min-occurs="1"/>
                   <assembly ref="mapping-provenance" min-occurs="1">
                         <use-name>provenance</use-name>
@@ -48,13 +48,13 @@
                               <p>Back matter including references and resources.</p>
                         </remarks>
                   </assembly>
-            </model>
+            </model -->
             <remarks>
                   <p>A mapping collection affirmatively declares the relationships that exist between sets of controls and/or control statements in a source and target. It is expected that inferences can be made based on what is mapped; however, no inferences should be made based on what is not mapped, since it is impossible to quantify how complete or granular a given mapping is.</p>
             </remarks>
       </define-assembly>
 
-      <define-assembly name="mapping">
+      <!-- define-assembly name="mapping">
             <formal-name>Control Mapping</formal-name>
             <description>A mapping between two target resources.</description>
             <define-flag name="uuid" as-type="uuid" required="yes">
@@ -72,5 +72,5 @@
                         <group-as name="maps" in-json="ARRAY" />
                   </assembly>
             </model>
-      </define-assembly>
+      </define-assembly -->
 </METASCHEMA>
